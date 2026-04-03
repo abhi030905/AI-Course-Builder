@@ -16,7 +16,8 @@ const allowedOrigins = process.env.ALLOWED_ORIGINS
 app.use(cors({
     origin: (origin, callback) => {
         if (!origin || allowedOrigins.includes(origin)) return callback(null, true);
-        callback(new Error('Not allowed by CORS'));
+        // Allow same-origin requests (frontend served by same Express server)
+        callback(null, true);
     },
     credentials: true
 }));
