@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Builder - AI Course Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>AI Course Builder</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="builder.html" class="nav-link active">Course Builder</a></li>
+                <li><a href="courses.html" class="nav-link">My Courses</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="login.html" class="nav-link login-btn" id="auth-link">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Builder Section -->
+    <section class="builder-section">
+        <div class="container">
+            <div class="builder-header">
+                <h1><i class="fas fa-magic"></i> AI Course Builder</h1>
+                <p>Create your personalized learning path in minutes</p>
+            </div>
+
+            <!-- Course Builder Form -->
+            <div class="builder-form-container">
+                <form id="course-form" class="builder-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="course-topic">
+                                <i class="fas fa-lightbulb"></i>
+                                Course Topic
+                            </label>
+                            <input 
+                                type="text" 
+                                id="course-topic" 
+                                placeholder="e.g., Advanced JavaScript, Machine Learning, Digital Marketing"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-primary btn-generate">
+                        <i class="fas fa-rocket"></i>
+                        Generate My Course
+                    </button>
+                </form>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading" class="loading-container" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p>Creating your personalized course...</p>
+                <p style="font-size: 0.875rem; color: #64748b; margin-top: 0.5rem;">This may take 30-60 seconds...</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="js/script.js"></script>
+    <script src="js/builder.js"></script>
+</body>
+</html>

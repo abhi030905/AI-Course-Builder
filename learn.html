@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Learning - AI Course Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/learn.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>AI Course Builder</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="builder.html" class="nav-link">Course Builder</a></li>
+                <li><a href="courses.html" class="nav-link active">My Courses</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link" id="logout-link" onclick="localStorage.clear(); window.location.href='login.html'; return false;">Logout</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="learning-platform">
+        <aside class="module-sidebar">
+            <div class="sidebar-header">
+                <a href="courses.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Courses</span>
+                </a>
+                <h2 id="course-title-sidebar"></h2>
+                <div class="course-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="course-progress-bar"></div>
+                    </div>
+                    <span class="progress-text" id="course-progress-text">0% Complete</span>
+                </div>
+            </div>
+            <nav class="module-list" id="module-list"></nav>
+        </aside>
+
+        <main class="content-area">
+            <div class="content-header">
+                <div class="breadcrumb" id="breadcrumb"></div>
+            </div>
+
+            <div id="module-view" class="module-content">
+                <h1 id="module-title"></h1>
+                <p id="module-description"></p>
+                <div class="topic-list" id="topic-list"></div>
+            </div>
+
+            <div id="topic-view" class="topic-content" style="display: none;">
+                <button class="back-to-module" id="back-to-module">
+                    <i class="fas fa-arrow-left"></i> Back to Module
+                </button>
+                <h2 id="topic-title"></h2>
+                <p id="topic-description"></p>
+                
+                <div class="playlist-info" id="playlist-info"></div>
+                
+                <div class="video-container">
+                    <div id="video-player"></div>
+                </div>
+
+                <div class="video-notes">
+                    <div class="notes-header">
+                        <h3>📝 Study Notes</h3>
+                        <button class="btn-generate" id="generate-notes-btn">
+                            <i class="fas fa-magic"></i> Generate Notes
+                        </button>
+                    </div>
+                    <div class="notes-content" id="notes-content">
+                        <p class="notes-placeholder">Click "Generate Notes" to create AI-powered study notes for this video.</p>
+                    </div>
+                </div>
+
+
+
+                <div class="topic-actions">
+                    <button class="btn-complete" id="mark-complete">Mark as Complete</button>
+                    <button class="btn-next" id="next-topic">Next Topic</button>
+                </div>
+            </div>
+
+            <div id="quiz-view" class="quiz-content" style="display: none;">
+                <div class="quiz-header">
+                    <h2 id="quiz-title"></h2>
+                    <p id="quiz-description"></p>
+                    <div class="quiz-progress">
+                        <span id="quiz-question-number"></span>
+                    </div>
+                </div>
+
+                <div class="quiz-body">
+                    <div class="question-card">
+                        <h3 id="question-text"></h3>
+                        <div class="options-list" id="options-list"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-actions">
+                    <button class="btn-secondary" id="quiz-prev" disabled>Previous</button>
+                    <button class="btn-primary" id="quiz-submit">Submit Answer</button>
+                    <button class="btn-primary" id="quiz-next" style="display: none;">Next Question</button>
+                </div>
+
+                <div class="quiz-results" id="quiz-results" style="display: none;">
+                    <div class="results-card">
+                        <h3>Quiz Complete</h3>
+                        <div class="score-display">
+                            <span class="score" id="quiz-score"></span>
+                            <span class="score-label">Score</span>
+                        </div>
+                        <p id="quiz-feedback"></p>
+                        <button class="btn-primary" id="continue-learning">Continue Learning</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="js/script.js"></script>
+    <script src="js/learn.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module - AI Course Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/module.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>AI Course Builder</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="builder.html" class="nav-link">Course Builder</a></li>
+                <li><a href="courses.html" class="nav-link">My Courses</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="login.html" class="nav-link login-btn" id="auth-link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Module Content -->
+    <div class="module-container">
+        <div class="module-sidebar">
+            <div class="module-nav">
+                <h3 id="course-title">Course Title</h3>
+                <div class="module-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="module-progress"></div>
+                    </div>
+                    <span id="progress-text">Module 1 of 8</span>
+                </div>
+            </div>
+            
+            <div class="content-sections">
+                <div class="section-item active" data-section="videos">
+                    <i class="fas fa-video"></i>
+                    <span>Videos</span>
+                    <span class="section-count" id="video-count">0</span>
+                </div>
+                <div class="section-item" data-section="notes">
+                    <i class="fas fa-sticky-note"></i>
+                    <span>Notes</span>
+                </div>
+                <div class="section-item" data-section="quiz1">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Mid Quiz</span>
+                </div>
+                <div class="section-item" data-section="quiz2">
+                    <i class="fas fa-clipboard-check"></i>
+                    <span>Final Quiz</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="module-main">
+            <div class="module-header">
+                <h1 id="module-title">Module Title</h1>
+                <p id="module-description">Module description</p>
+            </div>
+
+            <!-- Videos Section -->
+            <div id="videos-section" class="content-section active">
+                <h2><i class="fas fa-video"></i> Video Lessons</h2>
+                <div id="videos-list" class="videos-grid"></div>
+            </div>
+
+            <!-- Notes Section -->
+            <div id="notes-section" class="content-section">
+                <h2><i class="fas fa-sticky-note"></i> Study Notes</h2>
+                <div class="notes-content">
+                    <div class="notes-summary">
+                        <h3>Summary</h3>
+                        <p id="notes-summary-text"></p>
+                    </div>
+                    <div class="notes-keypoints">
+                        <h3>Key Points</h3>
+                        <ul id="notes-keypoints-list"></ul>
+                    </div>
+                    <div class="notes-resources">
+                        <h3>Additional Resources</h3>
+                        <ul id="notes-resources-list"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz 1 Section -->
+            <div id="quiz1-section" class="content-section">
+                <h2><i class="fas fa-question-circle"></i> Mid-Module Quiz</h2>
+                <div class="quiz-container">
+                    <div class="quiz-info">
+                        <p>Test your understanding of the first half of this module</p>
+                        <div class="quiz-stats">
+                            <span><i class="fas fa-clock"></i> 10 minutes</span>
+                            <span><i class="fas fa-question"></i> 5 questions</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary quiz-start-btn" data-quiz="mid">
+                        <i class="fas fa-play"></i> Start Mid Quiz
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quiz 2 Section -->
+            <div id="quiz2-section" class="content-section">
+                <h2><i class="fas fa-clipboard-check"></i> Final Module Quiz</h2>
+                <div class="quiz-container">
+                    <div class="quiz-info">
+                        <p>Complete assessment covering all module content</p>
+                        <div class="quiz-stats">
+                            <span><i class="fas fa-clock"></i> 15 minutes</span>
+                            <span><i class="fas fa-question"></i> 10 questions</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary quiz-start-btn" data-quiz="final">
+                        <i class="fas fa-play"></i> Start Final Quiz
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/module.js"></script>
+</body>
+</html>

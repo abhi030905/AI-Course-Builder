@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - AI Course Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+    <!-- Quiz Container -->
+    <div class="quiz-container">
+        <!-- Quiz Header -->
+        <div class="quiz-header">
+            <button class="btn btn-secondary" onclick="window.history.back()" style="margin-right: 20px;">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <div class="quiz-info">
+                <h2 id="quiz-title">Module Quiz</h2>
+                <span id="quiz-type" class="quiz-badge">Mid-Module</span>
+            </div>
+            <div class="quiz-timer">
+                <i class="fas fa-clock"></i>
+                <span id="timer">10:00</span>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="quiz-progress">
+            <div class="progress-bar">
+                <div class="progress-fill" id="quiz-progress"></div>
+            </div>
+            <span id="progress-text">Question 1 of 5</span>
+        </div>
+
+        <!-- Question Container -->
+        <div class="question-container" id="question-container">
+            <div class="question-number">Question <span id="current-question">1</span></div>
+            <h3 class="question-text" id="question-text">Loading question...</h3>
+            
+            <div class="options-container" id="options-container">
+                <!-- Options will be inserted here -->
+            </div>
+
+            <div class="quiz-navigation">
+                <button class="btn btn-secondary" id="prev-btn" disabled>
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <button class="btn btn-primary" id="next-btn">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="btn btn-primary" id="submit-btn" style="display: none;">
+                    Submit Quiz <i class="fas fa-check"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Container -->
+        <div class="results-container" id="results-container" style="display: none;">
+            <div class="results-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h2>Quiz Completed!</h2>
+            <div class="score-display">
+                <div class="score-circle">
+                    <span id="score-percentage">0%</span>
+                </div>
+                <p id="score-text">You scored 0 out of 0</p>
+            </div>
+            
+            <div class="results-stats">
+                <div class="stat-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span id="correct-answers">0</span>
+                    <p>Correct</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-times-circle"></i>
+                    <span id="wrong-answers">0</span>
+                    <p>Wrong</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <span id="time-taken">0:00</span>
+                    <p>Time Taken</p>
+                </div>
+            </div>
+
+            <div class="results-actions">
+                <button class="btn btn-primary" onclick="window.close()">
+                    <i class="fas fa-arrow-left"></i> Back to Module
+                </button>
+                <button class="btn btn-secondary" onclick="location.reload()">
+                    <i class="fas fa-redo"></i> Retake Quiz
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>

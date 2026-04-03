@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Courses - AI Course Builder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>AI Course Builder</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="builder.html" class="nav-link">Course Builder</a></li>
+                <li><a href="courses.html" class="nav-link active">My Courses</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="login.html" class="nav-link login-btn" id="auth-link">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Courses Section -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="courses-header">
+                <h1><i class="fas fa-book-open"></i> My Courses</h1>
+                <p>Track your learning progress and continue where you left off</p>
+                <a href="builder.html" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Create New Course
+                </a>
+            </div>
+
+            <!-- Course Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-book"></i>
+                    <div class="stat-info">
+                        <h3>0</h3>
+                        <p>Active Courses</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-trophy"></i>
+                    <div class="stat-info">
+                        <h3>0</h3>
+                        <p>Completed</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <div class="stat-info">
+                        <h3>0h</h3>
+                        <p>Total Time</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Courses Grid -->
+            <div class="courses-grid" id="courses-grid">
+                <div class="empty-state" id="empty-state">
+                    <i class="fas fa-book-open"></i>
+                    <h3>No courses yet</h3>
+                    <p>Create your first AI-powered course to get started</p>
+                    <a href="builder.html" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Create Your First Course
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="js/script.js"></script>
+    <script src="js/courses.js"></script>
+</body>
+</html>
